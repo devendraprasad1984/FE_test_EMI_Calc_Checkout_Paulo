@@ -6,7 +6,7 @@ const ListOptionPayments=props=>{
   return <>
     <div className='row border pad20'>
       <option value={title}>{title}</option>
-      <span>{config.symbols.euro} {config.formatters.euroCurrencyFormatter(amount)}</span>
+      <span>{config.formatters.euroCurrencyFormatter(amount)}</span>
     </div>
   </>
 }
