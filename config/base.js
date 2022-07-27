@@ -1,9 +1,9 @@
 import React from "react";
 
 export default {
-  name: "Devendra Prasad",
-  headline: "Technophile . Inquisitive . Motivated . Self-Learner",
-  title: "Tech Lead UI Developer",
+  name: "FE UI Test",
+  headline: "by Devendra Prasad",
+  title: "Test",
   email: "devendraprasad1984@gmail.com",
   phone: "+91 9582797772",
 };

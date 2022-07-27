@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import config from "../config";
 import Link from "next/link";
 import { useReactAppContext } from "../context/appContext";
+import NavLink from "./navLink";
 
 const btnNav = ["navBtn"].join(" ");
 
@@ -32,18 +33,7 @@ const Nav = () => {
         <div className={["pageNav", "column"].join(" ")}>
           <div className={"column"}>
             {config.menus.map((menu) => {
-              return (
-                <Link
-                  prefetch={true}
-                  key={"id" + menu.name}
-                  href={menu.href}
-                  passHref
-                >
-                  <span className={`navBtn ${activeColor(menu.href)}`}>
-                    {menu.name}
-                  </span>
-                </Link>
-              );
+              return <NavLink name={menu.name} href={menu.href}/>
             })}
           </div>
         </div>

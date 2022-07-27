@@ -17,7 +17,7 @@ const Achievement = (props) => {
 
 export async function getStaticProps(context) {
   const { req, res } = context;
-  const data = await getFromApiAsync(config.endpoints.achievements);
+  const data = await getFromApiAsync(config.endpoints.checkout);
   return {
     props: {
       data,

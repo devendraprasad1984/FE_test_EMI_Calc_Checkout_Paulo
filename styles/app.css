@@ -1,6 +1,7 @@
 :root {
     --colorBrickRed: #c03950;
     --colorMandy: #e14963;
+    --colorNavy: #0f0d52;
     --colorJellyBean: #2ca5a9;
     --colorParadiso: #32bcc1;
     --colorJava: #55d6da;
@@ -223,14 +224,13 @@ pre {
 }
 
 
-.navBtn {
+.navBtn,.btn, button {
     padding: 10px;
     text-decoration: none;
-    color: var(--main-color);
+    color: var(--colorWhite);
     margin: 3px;
     text-align: left;
-    background-color: #FFE7E7;
-    border: 1px solid #FEE0E0;
+    border: 1px solid var(--colorWhite);
     transition: border .2s ease-in-out, box-shadow .2s ease-in-out;
     font-size: 1rem;
     border-radius: 10px;

@@ -1,11 +1,11 @@
-import Nav from "../core/nav";
+import PageHeader from "../core/PageHeader";
 
 export default function MainAppLayout({children}) {
   return (
     <div className={["textColor"].join(" ")}>
-      <Nav/>
-      <div className={"rightPanel"}>
-        <div className={"mainAppContainerOverlay"}>{children}</div>
+      <PageHeader/>
+      <div className={"mainAppContainer"}>
+        {children}
       </div>
     </div>
   );

@@ -28,12 +28,6 @@ const PageHeader = ({ children }: Props) => {
           </span>
         </div>
       </div>
-      <div className="row wrap">
-        <a href="https://dpresume.com/docs/pdf/dpresume.pdf#view=FitH">
-          Download CV
-        </a>
-        <span className="button5">Open/Close</span>
-      </div>
       <div>{children}</div>
     </div>
   );
