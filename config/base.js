@@ -1,5 +1,3 @@
-import React from "react";
-
 export default {
   name: "FE UI Test",
   headline: "by Devendra Prasad",
