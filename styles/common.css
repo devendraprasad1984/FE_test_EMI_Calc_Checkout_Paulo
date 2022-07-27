@@ -278,7 +278,7 @@
 }
 
 .bgnavy {
-    background-color: #3679de;
+    background-color: var(--colorNavy);
 }
 
 .red {

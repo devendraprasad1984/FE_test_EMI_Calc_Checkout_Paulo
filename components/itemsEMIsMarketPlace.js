@@ -1,13 +1,21 @@
 import React from "react";
 import ListOptionPayments from "./listOptionsPayment";
+import NavLink from "../core/navLink";
 
 const ItemsEMIsMarketPlace=props=>{
+  const optionPayments=[
+    {title: '1 payment due', amount:413217.02},
+    {title: '2 payment due', amount:413217.02},
+    {title: '3 payment due', amount:413217.02},
+    {title: '4 payment due', amount:413217.02}
+  ]
   return <>
     <div className='column pad20'>
       <span>Choose your items</span>
-      <ListOptionPayments title={'1 payment due'} amount={43217.02}/>
-      <ListOptionPayments title={'2 payment due'} amount={21635.51}/>
-      <ListOptionPayments title={'3 payment due'} amount={14423.67}/>
+      <ListOptionPayments groupName='term' optionPayments={optionPayments}/>
+      <div>
+        <NavLink name={'Continue'} href={''}/>
+      </div>
     </div>
   </>
 }

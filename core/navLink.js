@@ -9,9 +9,9 @@ const NavLink = props => {
       href={href}
       passHref
     >
-    <span className={`navBtn`}>
+    <button className={`bgnavy`}>
       {name}
-    </span>
+    </button>
     </Link>
   </>
 }
