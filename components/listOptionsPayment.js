@@ -2,20 +2,21 @@ import React from "react";
 import config from "../config";
 
 const ListOptionPayments = props => {
-  const {optionPayments, groupName, title, amount, optionClick} = props
+  const {optionPayments, groupName} = props
 
-  const RowOption =props=> <div className='row border pad20'>
-    <div onClick={props.optionClick}>
-      <input type='radio' value={props.title} name={groupName}/>
-      <span>{props.title}</span>
+  const RowOption = props => {
+    const {title, amount, optionClick} = props
+    return <div className='row border pad20'>
+      <div onClick={optionClick}>
+        <input type='radio' value={title} name={groupName}/>
+        <span>{title}</span>
+      </div>
+      <span>{config.formatters.euroCurrencyFormatter(amount)}</span>
     </div>
-    <span>{config.formatters.euroCurrencyFormatter(props.amount)}</span>
-  </div>
+  }
 
   return <>
-    {title && amount && <RowOption />}
-
-    {optionPayments && optionPayments.map((option, i)=>{
+    {optionPayments && optionPayments.map((option, i) => {
       return <RowOption {...option}/>
     })}
   </>

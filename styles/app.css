@@ -48,9 +48,9 @@
     src: url(/static/fonts/GothamRounded-Medium.woff2) format("woff2");
 }
 
-* {
+*, *:before, *:after  {
     box-sizing: border-box;
-    font-family: "Gotham Rounded";
+    /*font-family: "Gotham Rounded";*/
 }
 
 html {
@@ -242,3 +242,21 @@ pre {
     color: #222;
     font-weight: bolder;
 }
+
+.bl{
+    font-weight: bolder;
+}
+
+input, select{
+    border-style: solid;
+    border-color: 1px solid var(--colorWhisperGray);
+    border-radius: 5px;
+    padding: 5px;
+    margin:10px 0; /*top and bottom*/
+    /*box-shadow:0 0 15px 4px rgba(0,0,0,0.06);*/
+}
+textarea {
+    min-height: 10rem;
+}
+
+

@@ -1,16 +1,13 @@
 import React from "react";
 import config from "../../config";
-import ListDisplay from "../../components/listDisplay";
 import { getFromApiAsync } from "../../apis/get";
 import HeaderLine from "../../core/headeline";
+import Payments from "../../components/payment";
 
-const Achievement = (props) => {
+const CheckoutPayment = (props) => {
   return (
     <>
-      <HeaderLine title={"Achievements"} />
-      {/*<ListDisplay url={config.endpoints.achievements} />*/}
-
-      <ListDisplay list={props.data} />
+      <Payments/>
     </>
   );
 };
@@ -25,4 +22,4 @@ export async function getStaticProps(context) {
   };
 }
 
-export default Achievement;
+export default CheckoutPayment;

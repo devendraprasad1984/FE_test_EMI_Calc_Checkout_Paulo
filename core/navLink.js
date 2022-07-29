@@ -9,7 +9,7 @@ const NavLink = props => {
       href={href}
       passHref
     >
-    <button className={`bgnavy`}>
+    <button className={`bgnavy size12`}>
       {name}
     </button>
     </Link>
