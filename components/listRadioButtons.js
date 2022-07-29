@@ -6,19 +6,16 @@ const ListRadioButtons = props => {
   const RowOption = props => {
     const {title, click, selected} = props
     return <div className="radioButtonControl" onClick={click}>
-      {selected !== undefined && selected === true ?
-        <input type="radio" id={title} name={groupName} value={title} checked/>
-        : <input type="radio" id={title} name={groupName} value={title}/>
-      }
-    <label htmlFor={title}>{title}</label>
-  </div>
+      <input type="radio" id={title} name={groupName} value={title}/>
+      <label htmlFor={title}>{title}</label>
+    </div>
 
   }
 
   return <>
-      {options && options.map((option, i) => {
-        return <RowOption {...option}/>
-      })}
+    {options && options.map((option, i) => {
+      return <RowOption {...option}/>
+    })}
   </>
 }
 
