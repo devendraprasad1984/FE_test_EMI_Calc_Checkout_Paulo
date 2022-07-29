@@ -7,10 +7,10 @@ const ListOptionPayments = props => {
   const RowOption = props => {
     const {title, amount, optionClick} = props
     return <div className='row border pad20'>
-      <div onClick={optionClick}>
+      <label onClick={optionClick}>
         <input type='radio' value={title} name={groupName}/>
         <span>{title}</span>
-      </div>
+      </label>
       <span>{config.formatters.euroCurrencyFormatter(amount)}</span>
     </div>
   }

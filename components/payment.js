@@ -1,8 +1,16 @@
 import React from "react";
 import NavLink from "../core/navLink";
 import config from "../config";
+import ListRadioButtons from "./listRadioButtons";
 
 const Payments = props => {
+  const radioOptions=[
+    {title: 'Bank Transfer', click: ()=>{}, selected: true},
+    {title: 'pay by Bank', click: ()=>{}},
+    {title: 'Credit Card', click: ()=>{}},
+    {title: 'IDEAL', click: ()=>{}}
+  ]
+
   return <>
     <div>Your Payment</div>
     <div className='marginU20 wid60 size12'>
@@ -22,13 +30,10 @@ const Payments = props => {
       <div className='marginU20'>
         <span>Your payment</span>
         <div className='margin10 row'>
-          <span>Bank Transfer</span>
-          <span>pay by Bank</span>
-          <span>Credit Card</span>
-          <span>IDEAL</span>
+          <ListRadioButtons options={radioOptions} groupName='paymentOptions'/>
         </div>
 
-        <div className='margin10 row'>
+        <div className='row space'>
           <div className='column wid60'>
             <span>Label</span>
             <input type="text" value='1234 4567 8901 1112'/>
